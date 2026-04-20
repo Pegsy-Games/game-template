@@ -1,0 +1,63 @@
+/* === Pegsy Games brand tokens === */
+:root {
+  --bg: #0f1115;
+  --fg: #f4f1ea;
+  --muted: #9a968d;
+  --accent: #ffcf4a;
+  --accent-fg: #0f1115;
+}
+
+/* === Reset === */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Pegsy Games back-link pill (keep on every game) === */
+.brand-link {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 6px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  z-index: 1000;
+}
+.brand-link:hover,
+.brand-link:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  outline: none;
+}
+.brand-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brand-link {
+    top: 10px;
+    left: 10px;
+    font-size: 13px;
+    padding: 5px 10px 5px 5px;
+  }
+  .brand-link img { width: 20px; height: 20px; }
+}
